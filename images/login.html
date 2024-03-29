@@ -1,0 +1,109 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Login Form</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container .input-field {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .container .input-field input {
+        width: 100%;
+        padding: 5px 0;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        outline: none;
+    }
+
+    .container .input-field label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 5px 0;
+        background-color: #fff;
+        pointer-events: none;
+        transition: 0.3s ease;
+    }
+
+    .container .input-field input:focus ~ label,
+    .container .input-field input:valid ~ label {
+        transform: translateY(-15px);
+        font-size: 12px;
+        color: #0077B6;
+    }
+
+    .container .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #0077B6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .container .submit-btn:hover {
+        background-color: #005E96;
+    }
+
+    .container .social-login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .container .social-login .or {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        font-size: 14px;
+        color: #999;
+    }
+
+    .container .social-login button {
+        padding: 10px;
+        background-color: #f0f2f5;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .container .social-login button:hover {
+        background-color: #e0e2e6;
+    }
+
+    .container .forgot-password {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .container .forgot-password a {
+        color: #0077B6;
+        text-decoration: none;
+    }
+
+    .container .forgot-password a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head> <body> <div class="container"> <h1>Login</h1> <form> <div class="input-field"> <input type="text" name="username" id="username" required> <label for="username">Username</label> </div> <div class="input-field"> <input type="password" name="password" id="password" required> <label for="password">Password</label> </div> <input class="submit-btn" type="submit" value="Login"> </form> <div class="social-login"> <button>Facebook</button> <button>Google</button> <div class="or">or</div> </div> <div class="forgot-password"> <a href="#">Forgot Password?</a> </div> </div> </body> </html>
